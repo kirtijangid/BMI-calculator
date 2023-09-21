@@ -185,7 +185,9 @@ class _AppbarState extends State<Appbar> {
                         color: Colors.black54,
                         fontSize: 15
                       ),
+                      textAlign: TextAlign.center,
                       ),
+
                     ],
                   ),
                  ),
