@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Appbar extends StatefulWidget {
@@ -18,6 +20,37 @@ class _AppbarState extends State<Appbar> {
   void calculateBMI() {
     final double? height = double.tryParse(_heightController.value.text);
     final double? weight = double.tryParse(_weightController.value.text);
+  
+     if (height == null || weight == null) {
+      setState(() {
+        errorText = "Please enter your Height and Weight";
+      });
+      return;
+    }
+
+    if (height <= 0 || weight <= 0) {
+      setState(() {
+        errorText = "Your Height and Weight must be positive numbers";
+      });
+      return;
+    }
+
+    setState(() {
+      bmi = weight / pow((height / 100), 2);
+      if (bmi! < 18.5) {
+        status = "Underweight";
+      } else if (bmi! > 18.5 && bmi! < 25) {
+        status = 'Normal weight';
+      } else if (bmi! > 25 && bmi! < 30) {
+        status = 'Pre-Obesity';
+      } else if (bmi! > 30 && bmi! < 35) {
+        status = 'Obesity class 1';
+      } else if (bmi! > 35 && bmi! < 40) {
+        status = 'Obesity class 2';
+      } else {
+        status = 'Obesity class 3';
+      }
+    });
   }
 
   @override
@@ -66,9 +99,32 @@ class _AppbarState extends State<Appbar> {
               height: 30,
             ),
             Text(errorText),
-          ],
-        ),
+            const SizedBox(
+              height: 20,
+            ),
+
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+              border: Border.all(),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                children: [
+                  SizedBox(
+                    height: 50,
+                  ),
+                  
+                ],
+              ),
+            ),
+            ),
+        ]),
       ),
     );
   }
 }
+
