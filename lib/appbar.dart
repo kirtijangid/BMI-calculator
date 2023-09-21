@@ -34,10 +34,22 @@ class _AppbarState extends State<Appbar> {
                 labelText: 'Height (cm)',
                 suffixText: 'centmeters'
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextField(
+              controller: _heightController,
+              keyboardType: TextInputType.number,
+              textInputAction: TextInputAction.next,
+              decoration: const InputDecoration(
+                labelText: 'Weight (kg)',
+                suffixText: 'kilograms'
+              ),
             )
       ],
-      )
-      ,),
+      ),
+      ),
 
     );
   }
