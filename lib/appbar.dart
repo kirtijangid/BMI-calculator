@@ -133,6 +133,12 @@ class _AppbarState extends State<Appbar> {
                                     : null
                       ),
                       ),
+                      const Text('BMI',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black45
+                        ),
+                        ),
                     ],
                   )
                 ],
