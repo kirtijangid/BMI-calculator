@@ -195,13 +195,13 @@ class _AppbarState extends State<Appbar> {
                           Expanded(
                             child: Container(
                               height: 25,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.horizontal(
                                   left: Radius.circular(15)
                                 ),
                                 color: Colors.blue
                                 ),
-                                child: Center(
+                                child: const Center(
                                   child: Text('UnderWeight',
                                    style: TextStyle(
                                     fontSize: 8,
@@ -211,15 +211,72 @@ class _AppbarState extends State<Appbar> {
                                 ),
                             ),
                             ),
-                            
+                             Expanded(
+                            child: Container(
+                              height: 25,
+                              color: Colors.green,
+                              child: const Center(child: Text('Normal \nweight', style: TextStyle(fontSize: 8, color: Colors.white))),
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 25,
+                              color: Colors.yellow.shade700,
+                              child: const Center(child: Text('Pre-Obesity', style: TextStyle(fontSize: 8, color: Colors.white))),
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 25,
+                              color: Colors.orange,
+                              child: const Center(child: Text('Obesity \nclass 1', style: TextStyle(fontSize: 8, color: Colors.white))),
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 25,
+                              color: Colors.deepOrangeAccent,
+                              child: const Center(child: Text('Obesity \nclass 2', style: TextStyle(fontSize: 8, color: Colors.white))),
+
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              height: 25,
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.horizontal(
+                                    right: Radius.circular(15)
+                                ),
+                                color: Colors.red,
+                              ),
+                              child: const Center(child: Text('Obesity \nclass 3', style: TextStyle(fontSize: 8, color: Colors.white),
+                              ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const Row(
+                        mainAxisAlignment: 
+                        MainAxisAlignment.spaceBetween,
+                        children:  [
+                          Text('00', style: TextStyle(color: Colors.transparent,)),
+                          Text('18.5'),
+                          Text('25.0'),
+                          Text('30.0'),
+                          Text('35.0'),
+                          Text('40.0'),
+                          Text('00', style: TextStyle(color: Colors.transparent,)),
                         ],
                       )
                     ],
+                   ),
                   ),
-                 ),
                 ),
+                 
               ],
-            ),
+            ),    
+            
       ),
     );
   }
