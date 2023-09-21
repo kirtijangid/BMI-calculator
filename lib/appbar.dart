@@ -77,7 +77,7 @@ class _AppbarState extends State<Appbar> {
               height: 20,
             ),
             TextField(
-              controller: _heightController,
+              controller: _weightController,
               keyboardType: TextInputType.number,
              // textInputAction: TextInputAction.next,
               decoration: const InputDecoration(
@@ -98,10 +98,13 @@ class _AppbarState extends State<Appbar> {
             const SizedBox(
               height: 30,
             ),
+
             Text(errorText),
+
             const SizedBox(
               height: 20,
             ),
+            
             Container(
               width: MediaQuery.of(context).size.width,
               height: 300,
@@ -113,7 +116,7 @@ class _AppbarState extends State<Appbar> {
                 padding: EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     Row(
