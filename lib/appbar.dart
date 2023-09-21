@@ -187,7 +187,33 @@ class _AppbarState extends State<Appbar> {
                       ),
                       textAlign: TextAlign.center,
                       ),
-
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 25,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.horizontal(
+                                  left: Radius.circular(15)
+                                ),
+                                color: Colors.blue
+                                ),
+                                child: Center(
+                                  child: Text('UnderWeight',
+                                   style: TextStyle(
+                                    fontSize: 8,
+                                    color: Colors.white
+                                  ),
+                                  ),
+                                ),
+                            ),
+                            ),
+                            
+                        ],
+                      )
                     ],
                   ),
                  ),
