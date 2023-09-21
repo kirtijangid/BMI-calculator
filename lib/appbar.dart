@@ -79,7 +79,7 @@ class _AppbarState extends State<Appbar> {
             TextField(
               controller: _heightController,
               keyboardType: TextInputType.number,
-              textInputAction: TextInputAction.next,
+             // textInputAction: TextInputAction.next,
               decoration: const InputDecoration(
                   labelText: 'Weight (kg)', suffixText: 'kilograms'),
             ),
@@ -299,6 +299,7 @@ class _AppbarState extends State<Appbar> {
           ],
         ),
       ),
+      resizeToAvoidBottomInset: false,
     );
   }
 }
